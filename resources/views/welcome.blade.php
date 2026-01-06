@@ -370,7 +370,7 @@
                 Your browser does not support the video tag.
             </video>
         </div>
-        <section id="projects-section" class="projects-section my-10">
+        {{-- <section id="projects-section" class="projects-section my-10">
             <div class="container">
                 <div class="section-header mb-10">
                     <h2 class="text-center text-white font-bold text-4xl title-font">Our Projects</h2>
@@ -854,7 +854,7 @@
 
             </div>
 
-        </section>
+        </section> --}}
         <section id="projects-section" class="projects-section my-10">
             <div class="container">
                 <div class="section-header mb-10">
