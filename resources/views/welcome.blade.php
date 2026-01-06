@@ -39,7 +39,7 @@
             <nav id="navbar" class="navbar flex items-center justify-between py-4">
                 <div class="logo">
                     <a class="navbar-brand flex items-center" href="/">
-                        <img style="max-width:180px;" class="mx-auto" src="{{ asset('assets/images/logo/logo-white.png') }}"
+                        <img style="max-width:180px; width: 180px;" class="mx-auto" src="{{ asset('assets/images/logo/logo-white.png') }}"
                             alt="logo">
                     </a>
                 </div>
