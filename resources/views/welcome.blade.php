@@ -39,7 +39,7 @@
             <nav id="navbar" class="navbar flex items-center justify-between py-4">
                 <div class="logo">
                     <a class="navbar-brand flex items-center" href="/">
-                        <img class="mx-auto max-w-[115px]" src="{{ asset('assets/images/logo/logo.png') }}"
+                        <img style="max-width:180px;" class="mx-auto" src="{{ asset('assets/images/logo/logo-white.png') }}"
                             alt="logo">
                     </a>
                 </div>
@@ -851,7 +851,7 @@
                         </div>
                     </div>
                 </div>
-            
+
             </div>
 
         </section>
@@ -1209,7 +1209,7 @@
             <div class="flex justify-between">
                 <div class="w-1/2 text-center">
                     <div class="logo" style="width: 112px;">
-                        <img src="{{ asset('assets/images/logo/logo.png') }}" alt="" />
+                        <img src="{{ asset('assets/images/logo/logo-white.png') }}" alt="" />
                     </div>
                 </div>
                 <div class="w-1/2 text-end">
