@@ -22,6 +22,19 @@
     @livewireStyles
     <style></style>
 </head>
+<style>
+    .splide__slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .splide__slide img {
+        height: 48px;
+        width: auto;
+        opacity: 0.8;
+    }
+</style>
 
 <body class="bg-[rgb(13,13,17)]">
     <!-- Preloader -->
@@ -1238,6 +1251,26 @@
             </div>
 
         </section>
+        <!-- partners start -->
+        <section class="splide mt-10 py-4 bg-gray-500/30 visible!" aria-label="Splide Basic HTML Example">
+            <div id="partners-slider" class="splide">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">
+                            <img src="{{ asset('assets/images/logo/logo-white.png') }}" alt="Partner 1">
+                        </li>
+                        <li class="splide__slide">
+                            <img src="{{ asset('assets/images/logo/logo-white.png') }}" alt="Partner 2">
+                        </li>
+                        <li class="splide__slide">
+                            <img src="{{ asset('assets/images/logo/logo-white.png') }}" alt="Partner 3">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </section>
+        <!-- partners end -->
         <!-- contact start -->
         <section id="contact2" class="contact-section">
             <div class="container contact-area">
@@ -1406,6 +1439,7 @@
 
         <!-- FAQ end -->
 
+
     </main>
 
     <footer id="footer" class="footer pt-3">
@@ -1512,11 +1546,24 @@
 
 
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-
+    <script>
+        const partnersSlider = new Swiper('.partners-slider', {
+            spaceBetween: 30,
+            slidesPerView: 'auto',
+            loop: true,
+            freeMode: true,
+            autoplay: {
+                delay: 0
+            },
+            speed: 5000,
+        });
+    </script>
     @vite(['resources/js/app.js']);
 
 
+<script>
 
+</script>
     <script>
         const words = ["Custom Software", "Websites & Apps", "Branding & Design", "Growth Marketing"];
         let i = 0;

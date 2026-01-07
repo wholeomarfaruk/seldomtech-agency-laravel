@@ -2,6 +2,9 @@
 import $ from 'jquery';
 window.$ = window.jQuery = $;
 import counterUp from 'counterup2'
+// resources/js/app.js
+import Splide from '@splidejs/splide';
+import '@splidejs/splide/css';
 
 
 $(window).ready(function () {
@@ -54,7 +57,7 @@ var TrandingSlider = new Swiper('.tranding-slider', {
     loop: false,
     slidesPerView: 'auto',
     mousewheel: false,
-  spaceBetween: 18, // 👈 gap in px
+    spaceBetween: 18, // 👈 gap in px
 
     pagination: {
         el: '.swiper-pagination',
@@ -92,6 +95,35 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+    console.log($('#partners-slider'));
+    new Splide('#partners-slider', {
+        type: 'loop',
+
+
+
+        autoplay: true,
+        interval: 0,      // 🔥 continuous
+        speed: 15000,      // smooth movement
+        easing: 'linear',
+        perPage: 5,
+        perMove: 1,
+        arrows: false,
+        pagination: false,
+        breakpoints: {
+            0: {
+                perPage: 2,
+            },
+            576: {
+                perPage: 3,
+            },
+            992: {
+                perPage: 5,
+            },
+        },
+
+    }).mount();
+});
 
 
 // open class on click hamburger to toggle menu on mobile start ============
