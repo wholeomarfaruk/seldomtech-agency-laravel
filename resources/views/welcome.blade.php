@@ -185,7 +185,7 @@
     <!-- Header Section End-->
 
     <main>
-        <section id="hero_sec" class="hero_sec min-h-screen">
+        <section id="hero_sec" class="hero_sec min-h-70">
             <div class="container grid grid-cols-1 lg:grid-cols-2 gap-2">
                 <div>
                     <p
@@ -236,34 +236,34 @@
 
             </div>
         </section>
-
-        <section id="counter-section" class="counter-section py-10">
-            <div class="container">
-
-                <div class="grid grid-cols-2 lg:grid-cols-4">
-                    <div
-                        class=" flex flex-col items-center text-center border-r  border-b lg:border-b-0 border-gray-50 py-6">
-                        <h2 class="text-4xl font-semibold text-white counter title-font">5+</h2>
-                        <p class="text-gray-400 text-lg">Years of Experience</p>
-                    </div>
-                    <div
-                        class=" flex flex-col items-center text-center lg:border-r border-b lg:border-b-0 border-gray-50 py-6">
-                        <h2 class="text-4xl font-semibold text-white counter title-font">2000+</h2>
-                        <p class="text-gray-400 text-lg">Projects</p>
-                    </div>
-                    <div class=" flex flex-col items-center text-center border-r  border-gray-50 py-6">
-                        <h2 class="text-4xl font-semibold text-white counter title-font">1200+</h2>
-                        <p class="text-gray-400 text-lg">Happy Clients</p>
-                    </div>
-                    <div class=" flex flex-col items-center text-center border-0 border-gray-50 py-6">
-                        <h2 class="text-4xl font-semibold text-white counter title-font">1000+</h2>
-                        <p class="text-gray-400 text-lg">Partners</p>
-                    </div>
+        <!-- partners start -->
+        <section class="splide  py-4 bg-gray-500/30 visible!" aria-label="Splide Basic HTML Example">
+            <div id="partners-slider" class="splide">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">
+                            <a href="#" target="_blank">
+                                <img src="{{ asset('assets/images/logo/logo-white.png') }}" alt="Partner 1">
+                            </a>
+                        </li>
+                        <li class="splide__slide">
+                            <a href="#" target="_blank">
+                                <img src="{{ asset('assets/images/logo/logo-white.png') }}" alt="Partner 1">
+                            </a>
+                        </li>
+                        <li class="splide__slide">
+                            <a href="#" target="_blank">
+                                <img src="{{ asset('assets/images/logo/logo-white.png') }}" alt="Partner 1">
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
+
         </section>
 
-        <section id="services-section" class="services-section my-10">
+
+        <section id="services-section" class="services-section my-15">
             <div class="container">
                 <div class="section-header mb-10">
                     <h2 class="text-center text-white font-bold text-4xl title-font">Our Services</h2>
@@ -1251,26 +1251,38 @@
             </div>
 
         </section>
-        <!-- partners start -->
-        <section class="splide mt-10 py-4 bg-gray-500/30 visible!" aria-label="Splide Basic HTML Example">
-            <div id="partners-slider" class="splide">
-                <div class="splide__track">
-                    <ul class="splide__list">
-                        <li class="splide__slide">
-                            <img src="{{ asset('assets/images/logo/logo-white.png') }}" alt="Partner 1">
-                        </li>
-                        <li class="splide__slide">
-                            <img src="{{ asset('assets/images/logo/logo-white.png') }}" alt="Partner 2">
-                        </li>
-                        <li class="splide__slide">
-                            <img src="{{ asset('assets/images/logo/logo-white.png') }}" alt="Partner 3">
-                        </li>
-                    </ul>
+        <!-- partners end -->
+        <section id="counter-section" class="counter-section "
+            style="
+        background-image: url({{ asset('assets/images/banner/programming-background-collage.jpg') }});
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+        ">
+
+            <div class="grid grid-cols-2 lg:grid-cols-4 py-10 bg-black/90">
+                <div
+                    class=" flex flex-col items-center text-center border-r  border-b lg:border-b-0 border-gray-50 py-6">
+                    <h2 class="text-4xl font-semibold text-white counter title-font">5+</h2>
+                    <p class="text-gray-400 text-lg">Years of Experience</p>
+                </div>
+                <div
+                    class=" flex flex-col items-center text-center lg:border-r border-b lg:border-b-0 border-gray-50 py-6">
+                    <h2 class="text-4xl font-semibold text-white counter title-font">2000+</h2>
+                    <p class="text-gray-400 text-lg">Projects</p>
+                </div>
+                <div class=" flex flex-col items-center text-center border-r  border-gray-50 py-6">
+                    <h2 class="text-4xl font-semibold text-white counter title-font">1200+</h2>
+                    <p class="text-gray-400 text-lg">Happy Clients</p>
+                </div>
+                <div class=" flex flex-col items-center text-center border-0 border-gray-50 py-6">
+                    <h2 class="text-4xl font-semibold text-white counter title-font">1000+</h2>
+                    <p class="text-gray-400 text-lg">Partners</p>
                 </div>
             </div>
-
+            </div>
         </section>
-        <!-- partners end -->
         <!-- contact start -->
         <section id="contact2" class="contact-section">
             <div class="container contact-area">
@@ -1561,9 +1573,7 @@
     @vite(['resources/js/app.js']);
 
 
-<script>
-
-</script>
+    <script></script>
     <script>
         const words = ["Custom Software", "Websites & Apps", "Branding & Design", "Growth Marketing"];
         let i = 0;
