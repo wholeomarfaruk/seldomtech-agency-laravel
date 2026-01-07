@@ -2923,15 +2923,149 @@ button:focus {
         }
     }
 }
+#contact2 {
+    &.contact-section {
+        background-color: #000000;
+        padding: 60px 15px;
+
+        & .contact-area {
+            background: #0b011156;
+            border-radius: 10px;
+            padding: 25px 80px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(126, 14, 173, 0.56818);
+
+            @include mixins.breakpoint(md) {
+                padding: 40px 20px;
+            }
+
+            & .contact-info {
+                height: 100%;
+                display: flex;
+                justify-content: space-evenly;
+                flex-direction: column;
+
+                @include mixins.breakpoint(md) {
+                    padding-bottom: 20px;
+                }
+
+                & .first {
+                    & .title {
+                        font-family: Darker Grotesque;
+                        font-weight: 700;
+                        font-size: 40px;
+                        line-height: 128%;
+                        color: #ffffff;
+
+                        @include mixins.breakpoint(md) {
+                            font-size: 24px;
+                            line-height: 100%;
+                        }
+                    }
+
+                    & .text {
+                        font-family: "DM Sans", sans-serif;
+                        font-weight: 400;
+                        font-size: 20px;
+                        line-height: 150%;
+                        vertical-align: middle;
+                        color: #9ca3af;
+                        width: 70%;
+                        margin-top: 10px;
+
+                        @include mixins.breakpoint(md) {
+                            font-size: 16px;
+                            line-height: 120%;
+                            width: 100%;
+                        }
+                    }
+                }
+
+                & .middle {
+                    margin-top: 20px;
+
+                    & .contact-list {
+                        & li {
+                            font-family: "DM Sans", sans-serif;
+                            font-weight: 400;
+                            font-size: 20px;
+                            line-height: 150%;
+                            vertical-align: middle;
+                            color: #9ca3af;
+                            margin-bottom: 25px;
+
+                            & a {
+                                font-family: "DM Sans", sans-serif;
+                                font-weight: 400;
+                                font-size: 20px;
+                                line-height: 150%;
+                                vertical-align: middle;
+                                color: #9ca3af;
+
+                                &:hover {
+                                    color: #fff;
+                                    text-decoration: underline;
+                                }
+                            }
+
+                            & i {
+                                color: #fff;
+                                margin-right: 10px;
+                                line-height: 150%;
+                            }
+                        }
+                    }
+                }
+
+                & .end {
+                    @include mixins.breakpoint(md) {
+                        display: none;
+                    }
+
+                    & .social {
+                        & ul {
+                            & li {
+                                display: inline-block;
+
+                                & a {
+                                    width: 32px;
+                                    height: 32px;
+                                    border-radius: 50%;
+                                    color: #fff;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    margin-right: 10px;
+                                    border: 1px solid rgba(226, 223, 223, 0.192);
+                                    transition: all 0.3s ease-in-out;
+
+                                    & i {
+                                        color: #fff;
+                                        font-size: 16px;
+                                    }
+
+                                    &:hover {
+                                        transform: scale(1.2);
+                                        transition: all 0.3s ease-in-out;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
 .form {
-    border: 1px solid rgba(199, 199, 199, 0.5058823529);
+    border: 1px solid rgba(199, 199, 199, 0.2);
     border-radius: 10px;
     padding: 25px;
 
     background: linear-gradient(240.94deg,
             rgba(255, 255, 255, 0.5) -7.37%,
-            rgba(255, 255, 255, 0.1) 89.52%);
+            rgba(255, 255, 255, 0.1) 2.52%);
 
     backdrop-filter: blur(5px);
 

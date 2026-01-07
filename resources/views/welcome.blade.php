@@ -39,8 +39,8 @@
             <nav id="navbar" class="navbar flex items-center justify-between py-4">
                 <div class="logo">
                     <a class="navbar-brand flex items-center" href="/">
-                        <img style="max-width:180px; width: 180px;" class="mx-auto" src="{{ asset('assets/images/logo/logo-white.png') }}"
-                            alt="logo">
+                        <img style="max-width:180px; width: 180px;" class="mx-auto"
+                            src="{{ asset('assets/images/logo/logo-white.png') }}" alt="logo">
                     </a>
                 </div>
 
@@ -874,7 +874,7 @@
                     <ul class="filter flex-1 flex gap-2 ">
                         <li class="filter-item inline-flex  text-gray-300 rounded-2xl px-3 py-1 border border-gray-500 cursor-pointer text-[8px] md:text-sm  active"
                             data-filter="all">All</li>
-                            <li class="filter-item inline-flex text-gray-300 rounded-2xl px-3 py-1 border border-gray-500 cursor-pointer text-[8px] md:text-sm"
+                        <li class="filter-item inline-flex text-gray-300 rounded-2xl px-3 py-1 border border-gray-500 cursor-pointer text-[8px] md:text-sm"
                             data-filter="branding">Custom Software</li>
                         <li class="filter-item inline-flex text-gray-300 rounded-2xl px-3 py-1 border border-gray-500 cursor-pointer text-[8px] md:text-sm"
                             data-filter="design">Websites & Apps</li>
@@ -916,10 +916,13 @@
                                     class="inline-block w-fit mb-3
                             text-[10px] px-3 py-1 rounded-full
                             bg-purple-500/10 text-purple-400">
-                                    Website & Apps <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-2 inline">
-  <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-</svg>
- E-commerce Solutions
+                                    Website & Apps <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                        class="size-2 inline">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                                    </svg>
+                                    E-commerce Solutions
                                 </span>
 
                                 <!-- Title -->
@@ -975,10 +978,13 @@
                                     class="inline-block w-fit mb-3
                             text-[10px] px-3 py-1 rounded-full
                             bg-purple-500/10 text-purple-400">
-                                    Website & Apps <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-2 inline">
-  <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-</svg>
- E-commerce Solutions
+                                    Website & Apps <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                        class="size-2 inline">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                                    </svg>
+                                    E-commerce Solutions
                                 </span>
 
                                 <!-- Title -->
@@ -1034,10 +1040,13 @@
                                     class="inline-block w-fit mb-3
                             text-[10px] px-3 py-1 rounded-full
                             bg-purple-500/10 text-purple-400">
-                                    Website & Apps <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-2 inline">
-  <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-</svg>
- E-commerce Solutions
+                                    Website & Apps <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                        class="size-2 inline">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                                    </svg>
+                                    E-commerce Solutions
                                 </span>
 
                                 <!-- Title -->
@@ -1093,10 +1102,13 @@
                                     class="inline-block w-fit mb-3
                             text-[10px] px-3 py-1 rounded-full
                             bg-purple-500/10 text-purple-400">
-                                    Website & Apps <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-2 inline">
-  <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-</svg>
- E-commerce Solutions
+                                    Website & Apps <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                        class="size-2 inline">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                                    </svg>
+                                    E-commerce Solutions
                                 </span>
 
                                 <!-- Title -->
@@ -1152,10 +1164,13 @@
                                     class="inline-block w-fit mb-3
                             text-[10px] px-3 py-1 rounded-full
                             bg-purple-500/10 text-purple-400">
-                                    Website & Apps <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-2 inline">
-  <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-</svg>
- E-commerce Solutions
+                                    Website & Apps <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                        class="size-2 inline">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                                    </svg>
+                                    E-commerce Solutions
                                 </span>
 
                                 <!-- Title -->
@@ -1223,66 +1238,173 @@
             </div>
 
         </section>
- <!-- contact start -->
-      <section id="contact" class="contact-section">
-        <div class="container contact-area">
-          <div class="row">
-            <div class="col-md-6">
-              <div class="contact-info">
-                <div class="first">
-                  <h2 class="title">Get in touch with us</h2>
-                  <p class="text">
-                    Have an inquiry? Fill out the form to contact our team
-                  </p>
-                </div>
-                <div class="middle">
-                  <ul class="contact-list">
-                    <li><a href="mailto:contact@iblackai.com"><i class="fa-solid fa-envelope"></i>contact@iblackai.com</a></li>
-                    <li><i class="fa-solid fa-location-dot"></i>Dallas, Texas</li>
-                  </ul>
-                </div>
-                <div class="end">
-                  <div class="social">
-                    <ul>
-                      <li><a href="https://bsky.app/profile/iblackai.com" target="_blank"><i class="fa-brands fa-bluesky"></i></a></li>
-                      <li><a href="https://x.com/iblackAI" target="_blank"><i class="fa-brands fa-x"></i></a></li>
-                      <li><a href="https://pinterest.com/iBlackAI" target="_blank"><i class="fa-brands fa-pinterest"></i></a></li>
-                      <li><a href="https://instagram.com/iblack_ai" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
-                    </ul>
-                  </div>
-                </div>
+        <!-- contact start -->
+        <section id="contact2" class="contact-section">
+            <div class="container contact-area">
+                <div class="flex flex-col lg:flex-row">
+                    <div class="w-full lg:w-1/2">
+                        <div class="contact-info">
+                            <div class="first">
+                                <h2 class="title">Book a Meeting for<br> Discussion & Support</h2>
+                                <p class="text">
+                                    Let’s talk about your project or answer any questions. Fill out the form and our
+                                    team will get back to you shortly.
+                            </div>
+                            <div class="middle">
+                                <ul class="contact-list">
+                                    <li><a href="mailto:info@seldomtechsolutions.com"><i
+                                                class="fa-solid fa-envelope"></i>contact@seldomtechsolutions.com</a>
+                                    </li>
+                                    <li><i class="fa-solid fa-location-dot"></i>Puran Dhaka, Dhaka - 1100, Bangladesh
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="end">
+                                <div class="social">
+                                    <ul>
+                                        <li><a href="https://bsky.app/profile/iblackai.com" target="_blank"><i
+                                                    class="fa-brands fa-bluesky"></i></a></li>
+                                        <li><a href="https://x.com/iblackAI" target="_blank"><i
+                                                    class="fa-brands fa-x"></i></a></li>
+                                        <li><a href="https://pinterest.com/iBlackAI" target="_blank"><i
+                                                    class="fa-brands fa-pinterest"></i></a></li>
+                                        <li><a href="https://instagram.com/iblack_ai" target="_blank"><i
+                                                    class="fa-brands fa-instagram"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
 
-              </div>
-            </div>
-            <div class="col-md-6">
-              <form action="" class="form">
-                <fieldset class="mb-3">
-                  <label for="name">Your name</label>
-                  <input type="text" name="name" id="name" />
-                </fieldset>
-                <fieldset class="mb-3">
-                  <label for="subject">Subject</label>
-                  <input type="text" name="subject" id="subject" />
-                </fieldset>
-                <fieldset class="mb-3">
-                  <label for="email">Email Address</label>
-                  <input type="text" name="email" id="email" />
-                </fieldset>
-                <fieldset class="mb-3">
-                  <label for="message">Message</label>
-                  <textarea name="message" id="message" cols="30" rows="10"></textarea>
-                </fieldset class="mb-3">
-                <div class="btn-area">
-                  <button type="submit" class="btn btn-effect-1">Send <img src="{{asset('assets/images/icons/power.svg')}}" alt=""></button>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-1/2">
+                        <form action="" class="form">
+                            <fieldset class="mb-3">
+                                <label for="name">Your name</label>
+                                <input type="text" name="name" id="name"
+                                    placeholder=" Ex: Mr. John Doe" />
+                            </fieldset>
+                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-3 mb-3">
+                                <fieldset class=" ">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="text" name="phone" id="phone"
+                                        placeholder="Ex: +881684285963" />
+                                </fieldset>
+                                <fieldset class="">
+                                    <label for="email">Email Address</label>
+                                    <input type="text" name="email" id="email"
+                                        placeholder="Ex: example@gmail.com" />
+                                </fieldset>
+                            </div>
+                            <fieldset class="mb-3">
+                                <label for="subject">Subject</label>
+                                <input type="text" name="subject" id="subject"
+                                    placeholder="Ex: Custom Website Development" />
+                            </fieldset>
 
+                            <fieldset class="mb-3">
+                                <label for="message">Message</label>
+                                <textarea name="message" id="message" cols="30" rows="10"
+                                    placeholder="Write your requirments and message..."></textarea>
+                            </fieldset class="mb-3">
+                            <div class="btn-area">
+                                <button type="submit" class="btn btn-effect-1 cursor-pointer">SUBMIT <img
+                                        class="inline" src="{{ asset('assets/images/icons/power.svg') }}"
+                                        alt=""></button>
+
+                            </div>
+                        </form>
+                    </div>
                 </div>
-              </form>
             </div>
-          </div>
-        </div>
         </section>
 
-      <!-- contact end -->
+        <!-- contact end -->
+        <!-- FAQ start -->
+
+        <section id="faq" class="faq-section">
+            <div class="container">
+                <div class="section-header mb-10">
+                    <h2 class="text-center text-white font-bold text-4xl title-font">Frequently Asked Questions (FAQ)
+                    </h2>
+                    <p class="text-center text-gray-400 w-full lg:w-1/2 mx-auto">Frequently Asked Questions (FAQ) about
+                        our services, including custom software solutions, websites, and web applications.</p>
+                </div>
+                <div class="accordion " id="accordionPanelsStayOpenExample">
+                    <div x-data="{ open: false }" class="accordion-item border-b border-white/10">
+                        <h3 @click="open = !open"
+                            class="accordion-header text-2xl cursor-pointer w-full flex items-center justify-between gap-4 px-4 py-3 text-gray-50 hover:bg-gray-50/[0.03]">
+
+                            <span>What are the basic features?</span>
+
+                            <svg class="size-5 shrink-0 transition-transform duration-300"
+                                :class="{ '-rotate-180': open }" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </h3>
+
+                        <!-- Smooth height animation -->
+                        <div x-show="open" x-collapse class="overflow-hidden px-4 pb-4">
+
+                            <p class="accordion-body text-gray-300">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt similique,
+                                quae hic dicta quo facere facilis praesentium.
+                            </p>
+                        </div>
+                    </div>
+                    <div x-data="{ open: false }" class="accordion-item border-b border-white/10">
+                        <h3 @click="open = !open"
+                            class="accordion-header text-2xl cursor-pointer w-full flex items-center justify-between gap-4 px-4 py-3 text-gray-50 hover:bg-gray-50/[0.03]">
+
+                            <span>What are the basic features?</span>
+
+                            <svg class="size-5 shrink-0 transition-transform duration-300"
+                                :class="{ '-rotate-180': open }" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </h3>
+
+                        <!-- Smooth height animation -->
+                        <div x-show="open" x-collapse class="overflow-hidden px-4 pb-4">
+
+                            <p class="accordion-body text-gray-300">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt similique,
+                                quae hic dicta quo facere facilis praesentium.
+                            </p>
+                        </div>
+                    </div>
+                    <div x-data="{ open: false }" class="accordion-item border-b border-white/10">
+                        <h3 @click="open = !open"
+                            class="accordion-header text-2xl cursor-pointer w-full flex items-center justify-between gap-4 px-4 py-3 text-gray-50 hover:bg-gray-50/[0.03]">
+
+                            <span>What are the basic features?</span>
+
+                            <svg class="size-5 shrink-0 transition-transform duration-300"
+                                :class="{ '-rotate-180': open }" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </h3>
+
+                        <!-- Smooth height animation -->
+                        <div x-show="open" x-collapse class="overflow-hidden px-4 pb-4">
+
+                            <p class="accordion-body text-gray-300">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt similique,
+                                quae hic dicta quo facere facilis praesentium.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ end -->
 
     </main>
 
