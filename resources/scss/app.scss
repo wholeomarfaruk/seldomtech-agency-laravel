@@ -431,7 +431,7 @@ button:focus {
     }
 
     #navbar {
-        gap: 96px;
+        gap: 10px;
         border-radius: 10px;
         border-width: 1px;
         padding-top: 10px;
@@ -489,6 +489,8 @@ button:focus {
                         @include mixins.breakpoint(md) {
                             padding-left: 20px;
                             text-align: center;
+                             display: block;
+
                         }
 
                         &.active {

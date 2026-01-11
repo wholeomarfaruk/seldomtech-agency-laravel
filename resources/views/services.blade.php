@@ -964,7 +964,6 @@
                                     </a>
                                 </div>
                             </div>
-
                             <div
                                 class="swiper-slide max-w-[300px] bg-gradient-to-b  from-[#1b1b2a] to-[#0f0f18]
                                 border border-white/10 rounded-2xl
@@ -1574,7 +1573,18 @@
 
 
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-  
+    <script>
+        const partnersSlider = new Swiper('.partners-slider', {
+            spaceBetween: 30,
+            slidesPerView: 'auto',
+            loop: true,
+            freeMode: true,
+            autoplay: {
+                delay: 0
+            },
+            speed: 5000,
+        });
+    </script>
     @vite(['resources/js/app.js']);
 
 
