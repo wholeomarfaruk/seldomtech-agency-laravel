@@ -42,6 +42,34 @@ class ProjectSection extends Component
                 'featured_image' => 'https://images.unsplash.com/photo-1498050108023-c5249f4df085',
                 'url' => '#',
             ],
+            [
+                'title' => 'Project 3',
+                'category' => [
+                    'name' => 'Category 2',
+
+                ],
+                'parent_category' => [
+                    'name' => 'Category 2',
+                    'id' => 3,
+                ],
+                'description' => 'Lorem ipsum...',
+                'featured_image' => 'https://images.unsplash.com/photo-1498050108023-c5249f4df085',
+                'url' => '#',
+            ],
+            [
+                'title' => 'Project 4',
+                'category' => [
+                    'name' => 'Category 2',
+
+                ],
+                'parent_category' => [
+                    'name' => 'Category 2',
+                    'id' => 4,
+                ],
+                'description' => 'Lorem ipsum...',
+                'featured_image' => 'https://images.unsplash.com/photo-1498050108023-c5249f4df085',
+                'url' => '#',
+            ],
         ])->map(fn($project) => (object) $project);
         if ($this->parent_category == 'all') {
             $this->projects = $projects;
