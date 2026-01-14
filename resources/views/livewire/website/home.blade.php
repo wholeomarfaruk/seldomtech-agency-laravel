@@ -204,6 +204,7 @@
         </div>
 
     </section>
+
     <!-- contact start -->
     <section id="contact2" class="contact-section">
         <div class="container contact-area">

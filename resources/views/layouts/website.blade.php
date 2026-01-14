@@ -79,7 +79,7 @@
                            me-auto my-2 px-3 my-lg-0 navbar-nav-scroll ">
 
                         <li class="nav-item">
-                            <a class="nav-link font-medium text-gray-800 hover:text-indigo-600 p-2 {{ request()->routeIs('/') ? 'active' : '' }}"
+                            <a class="nav-link font-medium text-gray-800 hover:text-indigo-600 p-2 {{ Route::CurrentRouteName() == 'home' ? 'active' : '' }}"
                                 href="/">Home</a>
                         </li>
 
@@ -110,11 +110,11 @@
                                 class="dropdown-menu  relative lg:absolute left-0 mt-2 w-full lg:w-56
                                    bg-white shadow rounded-lg py-2">
                                 <li><a class="dropdown-item block px-4 py-2 hover:bg-gray-100"
-                                        href="privacy-policy.html">Privacy Policy</a></li>
+                                        href="/privacy-policy">Privacy Policy</a></li>
                                 <li><a class="dropdown-item block px-4 py-2 hover:bg-gray-100"
-                                        href="terms-of-use.html">Terms of use</a></li>
+                                        href="/terms-of-use">Terms of use</a></li>
                                 <li><a class="dropdown-item block px-4 py-2 hover:bg-gray-100"
-                                        href="contact-us.html">Contact Us</a></li>
+                                        href="/contact-us">Contact Us</a></li>
                             </ul>
                         </li>
 
