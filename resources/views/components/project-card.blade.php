@@ -1,6 +1,6 @@
 @props(['project'])
 <div
-    class="swiper-slide max-w-[300px] bg-gradient-to-b from-[#1b1b2a] to-[#0f0f18] border border-white/10 rounded-2xl p-5 flex flex-col h-full transition hover:border-purple-500/40">
+    class="swiper-slide max-w-[300px] bg-gradient-to-b from-[#1b1b2a] to-[#0f0f18] border border-white/10 rounded-2xl p-2 md:p-5 flex flex-col h-full transition hover:border-purple-500/40">
 
     <!-- Project Image -->
     <div class="rounded-xl overflow-hidden mb-4">
@@ -35,14 +35,14 @@
     </p>
 
     <!-- Spacer pushes buttons to bottom -->
-    <div class="mt-auto flex items-center gap-3">
+    <div class="mt-auto flex items-center justify-around gap-1 md:gap-3">
 
         <!-- Build Mine -->
         <a href="{{ $project?->url }}"
             class="inline-flex items-center gap-2
                                     px-4 py-2 rounded-lg
                                     border border-purple-500/40
-                                    text-purple-400 text-sm
+                                    text-purple-400 text-[10px] md:text-sm
                                     hover:bg-purple-500 hover:text-white
                                     transition">
             Build Mine →
@@ -53,7 +53,7 @@
             class="inline-flex items-center gap-2
                                     px-4 py-2 rounded-lg
                                     border border-white/10
-                                    text-gray-300 text-sm
+                                    text-gray-300 text-[10px] md:text-sm
                                     hover:bg-white/10 hover:text-white
                                     transition">
             Live Demo

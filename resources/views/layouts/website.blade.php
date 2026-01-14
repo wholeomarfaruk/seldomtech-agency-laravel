@@ -87,6 +87,10 @@
                             <a class="nav-link font-medium text-gray-800 hover:text-indigo-600 p-2 {{ request()->is('services') ? 'active' : '' }}"
                                 href="/services">Services</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link font-medium text-gray-800 hover:text-indigo-600 p-2 {{ request()->is('projects') ? 'active' : '' }}"
+                                href="/projects">Projects</a>
+                        </li>
 
                         <li class="nav-item">
                             <a class="nav-link font-medium text-gray-800 hover:text-indigo-600 p-2"
@@ -119,7 +123,7 @@
                         </li>
 
                         <!-- Follow Us Dropdown -->
-                        <li class="nav-item dropdown relative" x-data="{ open: false }">
+                        {{-- <li class="nav-item dropdown relative" x-data="{ open: false }">
                             <a x-on:click="open = !open"
                                 class="nav-link dropdown-toggle font-medium text-gray-800 hover:text-indigo-600 p-2 cursor-pointer">
                                 Follow Us
@@ -163,7 +167,7 @@
                                     </a>
                                 </li>
                             </ul>
-                        </li>
+                        </li> --}}
 
                     </ul>
 
