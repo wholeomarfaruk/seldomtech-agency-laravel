@@ -79,13 +79,13 @@
                            me-auto my-2 px-3 my-lg-0 navbar-nav-scroll ">
 
                         <li class="nav-item">
-                            <a class="nav-link active font-medium text-gray-800 hover:text-indigo-600 p-2"
+                            <a class="nav-link font-medium text-gray-800 hover:text-indigo-600 p-2 {{ request()->routeIs('/') ? 'active' : '' }}"
                                 href="/">Home</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link font-medium text-gray-800 hover:text-indigo-600 p-2"
-                                href="#">Blog</a>
+                            <a class="nav-link font-medium text-gray-800 hover:text-indigo-600 p-2 {{ request()->is('services') ? 'active' : '' }}"
+                                href="/services">Services</a>
                         </li>
 
                         <li class="nav-item">

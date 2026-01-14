@@ -175,14 +175,35 @@
         </video>
     </div>
     <!-- Projects start -->
-@livewire('website.components.project-section', [
-    'section_title' => 'Projects',
-    'section_description' => 'We build custom software solutions, websites, and web applications tailored to our clients specific needs.',
-])
-
-
+    @livewire('website.components.project-section', [
+        'section_title' => 'Projects',
+        'section_description' => 'We build custom software solutions, websites, and web applications tailored to our clients specific needs.',
+    ])
     <!-- Projects end -->
+    <section id="counter-section" class="counter-section "
+        style=" background-image: url({{ asset('assets/images/banner/programming-background-collage.jpg') }}); background-repeat: no-repeat; background-position: center; background-size: cover; background-attachment: fixed;">
 
+        <div class="grid grid-cols-2 lg:grid-cols-4 py-10 bg-black/90">
+            <div class=" flex flex-col items-center text-center border-r  border-b lg:border-b-0 border-gray-50 py-6">
+                <h2 class="text-4xl font-semibold text-white counter title-font">5+</h2>
+                <p class="text-gray-400 text-lg">Years of Experience</p>
+            </div>
+            <div
+                class=" flex flex-col items-center text-center lg:border-r border-b lg:border-b-0 border-gray-50 py-6">
+                <h2 class="text-4xl font-semibold text-white counter title-font">2000+</h2>
+                <p class="text-gray-400 text-lg">Projects</p>
+            </div>
+            <div class=" flex flex-col items-center text-center border-r  border-gray-50 py-6">
+                <h2 class="text-4xl font-semibold text-white counter title-font">1200+</h2>
+                <p class="text-gray-400 text-lg">Happy Clients</p>
+            </div>
+            <div class=" flex flex-col items-center text-center border-0 border-gray-50 py-6">
+                <h2 class="text-4xl font-semibold text-white counter title-font">1000+</h2>
+                <p class="text-gray-400 text-lg">Partners</p>
+            </div>
+        </div>
+
+    </section>
     <!-- contact start -->
     <section id="contact2" class="contact-section">
         <div class="container contact-area">
@@ -194,13 +215,15 @@
                             <p class="text">
                                 Let’s talk about your project or answer any questions. Fill out the form and our
                                 team will get back to you shortly.
+                            </p>
                         </div>
                         <div class="middle">
                             <ul class="contact-list">
-                                <li><a href="mailto:info@seldomtechsolutions.com"><i
-                                            class="fa-solid fa-envelope"></i>contact@seldomtechsolutions.com</a>
+                                <li><a href="mailto:info@seldomtechsolutions.com">
+                                        <i class="fa-solid fa-envelope"></i>contact@seldomtechsolutions.com</a>
                                 </li>
-                                <li><i class="fa-solid fa-location-dot"></i>Puran Dhaka, Dhaka - 1100, Bangladesh
+                                <li>
+                                    <i class="fa-solid fa-location-dot"></i>Puran Dhaka, Dhaka - 1100, Bangladesh
                                 </li>
                             </ul>
                         </div>
@@ -249,7 +272,7 @@
                             <label for="message">Message</label>
                             <textarea name="message" id="message" cols="30" rows="10"
                                 placeholder="Write your requirments and message..."></textarea>
-                        </fieldset class="mb-3">
+                        </fieldset>
                         <div class="btn-area">
                             <button type="submit" class="btn btn-effect-1 cursor-pointer">SUBMIT <img class="inline"
                                     src="{{ asset('assets/images/icons/power.svg') }}" alt=""></button>

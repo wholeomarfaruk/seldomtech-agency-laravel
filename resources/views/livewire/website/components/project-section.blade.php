@@ -66,7 +66,11 @@
                     </div>
                 </div>
             </div>
+            <div class="button-group text-center my-4 pt-5">
+                <a href="/projects" class="btn btn-effect-2 relative py-2! px-5!"> View All Projects
+                    <i class="bx bx-right-arrow-alt bx-fade-right"></i></a>
+            </div>
+
         </div>
 
     </section>
-

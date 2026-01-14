@@ -20,7 +20,7 @@
     "src": "node_modules/boxicons/fonts/boxicons.woff2"
   },
   "resources/css/app.css": {
-    "file": "assets/app-DgYj4D7N.css",
+    "file": "assets/app-rFs9zNWP.css",
     "src": "resources/css/app.css",
     "isEntry": true,
     "name": "app",
@@ -29,7 +29,7 @@
     ]
   },
   "resources/js/app.js": {
-    "file": "assets/app-C-KYnYQl.js",
+    "file": "assets/app-CWKQgxU1.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
@@ -38,7 +38,7 @@
     ]
   },
   "resources/scss/app.scss": {
-    "file": "assets/app-Dqtf43I2.css",
+    "file": "assets/app-YdoWbYOg.css",
     "src": "resources/scss/app.scss"
   }
 }

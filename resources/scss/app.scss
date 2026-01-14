@@ -2,6 +2,7 @@
 // main.scss
 @use "variables";
 @use "mixins";
+@use "components";
 
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 
@@ -34,14 +35,14 @@ ul {
     padding-left: 0;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    margin: 0;
-}
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+//     margin: 0;
+// }
 
 .container {
     width: 100%;
@@ -74,7 +75,10 @@ h6 {
         color: #ffffff;
     }
 }
-
+ .gradiant-style {
+            background: rgb(13, 13, 17,0.2);
+            background: linear-gradient(180deg, rgb(49 47 47 / 40%) 70%, rgba(13, 13, 17, 1) 100%);
+        }
 .accordion {
     & .accordion-item {
         margin-bottom: 15px;
