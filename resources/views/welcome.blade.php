@@ -80,7 +80,7 @@
 
                         <li class="nav-item">
                             <a class="nav-link active font-medium text-gray-800 hover:text-indigo-600 p-2"
-                                href="/">Home</a>
+                                href="/">Dashboard</a>
                         </li>
 
                         <li class="nav-item">
