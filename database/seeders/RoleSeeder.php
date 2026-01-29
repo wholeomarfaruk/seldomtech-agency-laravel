@@ -22,12 +22,12 @@ class RoleSeeder extends Seeder
         // -----------------------------
         $permissions = [
             //User Management fo all==========================================
-            'alluser.view',
-            'alluser.create',
-            'alluser.edit',
-            'alluser.delete',
-            'alluser.role_assign',
-            'alluser.role_remove',
+            'user.view',
+            'user.create',
+            'user.edit',
+            'user.delete',
+            'user.role_assign',
+            'user.role_remove',
 
             //Client Management
             'client.view',

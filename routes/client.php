@@ -1,5 +1,6 @@
 <?php
 
+use App\Livewire\Client\Dashboard;
 use Illuminate\Support\Facades\Route;
 
 
@@ -7,7 +8,7 @@ use Illuminate\Support\Facades\Route;
 
 //=============================Start Route For Client=============================
 
-      Route::get('/profile', \App\Livewire\Website\Home::class)->name('dashboard');
+      Route::get('/dashboard', Dashboard::class)->name('dashboard');
 
 
 //=============================END Route For Client=============================

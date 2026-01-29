@@ -20,7 +20,7 @@
     "src": "node_modules/boxicons/fonts/boxicons.woff2"
   },
   "resources/css/app.css": {
-    "file": "assets/app-BnvAuLR7.css",
+    "file": "assets/app-C1ggNuYu.css",
     "src": "resources/css/app.css",
     "isEntry": true,
     "name": "app",
@@ -38,7 +38,7 @@
     ]
   },
   "resources/scss/app.scss": {
-    "file": "assets/app-B-TvzG8_.css",
+    "file": "assets/app-g-29ZkVf.css",
     "src": "resources/scss/app.scss"
   }
 }

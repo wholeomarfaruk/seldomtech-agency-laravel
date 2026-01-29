@@ -47,7 +47,6 @@
                 <img class="w-[70%] -mt-10" src="{{ asset('assets/images/banner/web-development-composition.png') }}"
                     alt="" />
             </div>
-
         </div>
     </section>
 
@@ -60,27 +59,33 @@
                     business goals.</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                @foreach ($our_services as $service_item)
 
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="bx bx-code"></i>
                     </div>
-                    <h3 class="service-title">Custom Software</h3>
+                    <h3 class="service-title">{{ $service_item->name }}</h3>
                     <p class="service-description">
-                        We specialize in creating custom software solutions that meet your specific needs.
+                        {{ $service_item->description }}
                     </p>
                     <ul class="service-list">
-                        <li>Web Application</li>
-                        <li>Mobile Application</li>
-                        <li>Desktop Application</li>
+                        @if ($service_item->children->count()>0)
+                        @foreach ($service_item->children->take(4) as $service_child_item)
+
+                        <li>{{ $service_child_item->name }}</li>
+                        @endforeach
+                        @endif
+
                     </ul>
                     <div class="btn-group">
-                        <a href="#" class="btn btn-effect-1 px-10!">Learn More <i
+                        <a href="{{ route('services',['category' => $service_item->id]) }}" class="btn btn-effect-1 px-10!">Learn More <i
                                 class="bx bx-right-arrow-alt bx-fade-right"></i> </a>
                     </div>
                 </div>
+                @endforeach
 
-                <div class="service-card">
+                {{-- <div class="service-card">
                     <div class="service-icon">
                         <i class="bx bx-desktop"></i>
                     </div>
@@ -139,7 +144,7 @@
                         <a href="#" class="btn btn-effect-1 px-10!">Learn More <i
                                 class="bx bx-right-arrow-alt bx-fade-right"></i> </a>
                     </div>
-                </div>
+                </div> --}}
 
             </div>
         </div>

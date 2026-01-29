@@ -11,10 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
+
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('email')->unique();
+            $table->string('email')->unique(); //email
+            $table->string('phone',20)->unique(); //phone number with country code +8801684285963, +910123456789
+            $table->string('phone_without_cc',20)->nullable();//phone number without country code 01684285963
+            $table->string('country_code',5)->nullable(); //+880, +91, +1, etc
+            $table->string('country_name_short')->nullable(); //bd,in,us,etc
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();

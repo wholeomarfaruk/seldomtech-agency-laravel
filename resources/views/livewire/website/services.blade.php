@@ -11,13 +11,15 @@
                     </h1>
                     <p class="text-center mb-4 text-gray-300">We offer a wide range of services to help you achieve your
                         business goals.</p>
-                    <select name="category" id=""
+                    <select wire:model.live="category_id" name="category" id=""
                         class="w-full rounded-lg px-3 py-2 border border-gray-300 focus:outline-none font-bold text-gray-800 bg-gray-300/30">
                         <option value="all">All</option>
-                        <option value="web">Custom Software</option>
-                        <option value="mobile">Website & Apps</option>
-                        <option value="desktop">Branding & Design</option>
-                        <option value="desktop">Growth Marketing</option>
+                        @if($main_categories->count() > 0)
+                            @foreach ($main_categories as $category)
+                                <option value="{{ $category->id }}">{{ $category->name }}</option>
+                            @endforeach
+                        @endif
+                       
                     </select>
                 </div>
             </div>

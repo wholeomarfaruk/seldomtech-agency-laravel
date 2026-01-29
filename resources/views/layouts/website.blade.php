@@ -173,19 +173,46 @@
 
                     <!-- Buttons -->
                     <div class="button-group flex  lg:flex-row gap-3">
+                        @if(auth()->check())
+                        <div class="user-dropdown">
+                            <div x-data="{open: false}" class="dropdown relative">
+                                <button x-on:click="open = !open" class="flex items-center gap-2 cursor-pointer btn  dropdown-toggle" type="button" id="dropdownMenuButton3">
+                                    <span class="user-header flex items-center gap-1">
+                                        <span class="size-10 bg-gray-50/20 rounded-full overflow-hidden">
+                                            <img class="size-10!" src="{{ auth()->user()->profile_picture }}" alt="">
+                                        </span>
+                                        <span class="name">{{ auth()->user()->name }}</span>
+                                    </span>
+                                    <i class="bx bx-caret-down transition-transform" :class="{'rotate-180': open}" x-transition> </i>
+                                </button>
+                                <ul x-show="open" x-collapse="open" x-cloak @click.outside="open = false" x-transition class="absolute right-0 mt-2 py-2 w-48 bg-gray-700/80 rounded-md shadow-xl ">
+                                    @if (auth()->user()->hasPanel('admin'))
+                                    <li><a class="block w-full text-left px-4 py-2 text-white hover:bg-indigo-600/20" href="{{  route('admin.dashboard') }}">Admin Dashboard</a></li>
+                                    @endif
+                                    @if (auth()->user()->hasPanel('client'))
+                                    <li><a class="block w-full text-left px-4 py-2 text-white hover:bg-indigo-600/20" href="{{  route('client.dashboard') }}">My Dashboard</a></li>
+                                    @endif
+                                    <li><a class="block w-full text-left px-4 py-2 text-white hover:bg-indigo-600/20" href="#">Profile</a></li>
 
-                        <a href="login.html"
+                                    <hr>
+                                   <li><a class="block w-full text-left px-4 py-2 text-white hover:bg-indigo-600/20" href="#">Logout</a></li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        @else
+                        <a href="/login"
                             class="btn btn-effect-1 flex items-center gap-2 px-4 py-2 border rounded-lg hover:bg-gray-100">
                             Log In
                             <img src="{{ asset('assets/images/icons/power.svg') }}" class="w-4">
                         </a>
 
-                        <a href="register.html"
+                        <a href="/register"
                             class="btn btn-effect-1 flex items-center gap-2 px-4 py-2 border rounded-lg hover:bg-gray-100">
                             Sign Up
                             <img src="{{ asset('assets/images/icons/power.svg') }}" class="w-4">
                         </a>
-
+                        @endif
                         <a href="#" target="_blank"
                             class="btn flex items-center gap-2 px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700">
                             <i class='bx  bx-calendar-check text-2xl bx-flashing'></i>
@@ -204,7 +231,7 @@
     <!-- Header Section End-->
 
     <main>
-         {{ $slot }}
+        {{ $slot }}
     </main>
 
     <footer id="footer" class="footer pt-3">
@@ -323,7 +350,7 @@
             speed: 5000,
         });
     </script> --}}
-      {{-- <script>
+    {{-- <script>
             let swiper;
 
             function initSwiper() {

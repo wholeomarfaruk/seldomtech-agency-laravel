@@ -53,6 +53,7 @@ class User extends Authenticatable
      */
     protected $appends = [
         'profile_photo_url',
+        'profile_picture',
     ];
 
     /**
@@ -68,12 +69,28 @@ class User extends Authenticatable
         ];
     }
     public function panels()
-{
-    return $this->belongsToMany(Panel::class);
-}
+    {
+        return $this->belongsToMany(Panel::class);
+    }
 
-public function hasPanel(string $panelSlug): bool
-{
-    return $this->panels()->where('slug', $panelSlug)->exists();
-}
+    public function hasPanel(string $panelSlug): bool
+    {
+        return $this->panels()->where('slug', $panelSlug)->exists();
+    }
+    function photo()
+    {
+       return $this->morphOne(File::class, 'model')->where('type', 'profile')->first();
+    }
+     public function getProfilePictureAttribute()
+    {
+        if(!$this->photo()){
+            return url('assets/images/no-found/avatar.png');
+        }
+        $image=$this->photo();
+        if(file_exists('storage/'.$image)){
+            return url('storage/'.$image);
+        }else{
+            return url('assets/images/no-found/avatar.png');
+        }
+    }
 }

@@ -14,31 +14,10 @@ Route::get('/contact-us', ContactUs::class)->name('contactus');
 Route::get('/terms-of-use', TermsOfUse::class)->name('termsofuse');
 Route::get('/privacy-policy', PrivacyPolicy::class)->name('privacypolicy');
 Route::get('/projects', Projects::class)->name('projects');
-
+Route::get('/register', App\Livewire\Website\Register::class)->name('register');
 
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 
-//=============================Start Route For Client=============================
-Route::middleware(['auth:sanctum', 'verified', 'role:user|superadmin|client'])
-    ->prefix('client')
-    ->name('client.')
-    ->group(function () {
-
-      Route::get('/profile', \App\Livewire\Website\Home::class)->name('dashboard');
-
-    });
-//=============================END Route For Client=============================
-//=============================Start Route For Admin=============================
-Route::middleware(['auth:sanctum', 'verified', 'role:superadmin'])
-    ->prefix('client')
-    ->name('client.')
-    ->group(function () {
-
-      Route::get('/profile', \App\Livewire\Website\Home::class)->name('dashboard');
-
-
-    });
-//=============================END Route For Admin=============================
