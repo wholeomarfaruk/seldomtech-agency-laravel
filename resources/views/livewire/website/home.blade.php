@@ -63,7 +63,7 @@
 
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="bx bx-code"></i>
+                        {!! $service_item->icon !!}
                     </div>
                     <h3 class="service-title">{{ $service_item->name }}</h3>
                     <p class="service-description">
