@@ -14,7 +14,8 @@ class OurService extends Model
         'slug',
         'json_data',
         'parent_id',
-        'status',
+        'is_active',
+        'icon'
     ];
 
     public function parent()
@@ -26,5 +27,5 @@ class OurService extends Model
     {
         return $this->hasMany(OurService::class, 'parent_id');
     }
-    
+
 }
