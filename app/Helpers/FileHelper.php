@@ -43,8 +43,10 @@ if (!function_exists('upload_file')) {
             $diskInstance->makeDirectory($directory);
         }
 
-        // Copy file (overwrite if exists)
-        $diskInstance->copy($file->getRealPath(), $originalPath);
+        // Save file (overwrite if exists)
+        $diskInstance->put($originalPath, $content, [
+            'visibility' => 'public',
+        ]);
 
 
         // $paths['original'] = $originalPath;
