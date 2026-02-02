@@ -1,4 +1,15 @@
 {
+  "_splide-BRKXMWAJ.css": {
+    "file": "assets/splide-BRKXMWAJ.css",
+    "src": "_splide-BRKXMWAJ.css"
+  },
+  "_splide.min-Fq6cbpiK.js": {
+    "file": "assets/splide.min-Fq6cbpiK.js",
+    "name": "splide.min",
+    "css": [
+      "assets/splide-BRKXMWAJ.css"
+    ]
+  },
   "node_modules/boxicons/fonts/boxicons.eot": {
     "file": "assets/boxicons-CSrLvhY_.eot",
     "src": "node_modules/boxicons/fonts/boxicons.eot"
@@ -20,7 +31,7 @@
     "src": "node_modules/boxicons/fonts/boxicons.woff2"
   },
   "resources/css/app.css": {
-    "file": "assets/app-C1ggNuYu.css",
+    "file": "assets/app-CMTjJUGp.css",
     "src": "resources/css/app.css",
     "isEntry": true,
     "name": "app",
@@ -28,17 +39,26 @@
       "app.css"
     ]
   },
+  "resources/js/admin.js": {
+    "file": "assets/admin-iNeYnsxh.js",
+    "name": "admin",
+    "src": "resources/js/admin.js",
+    "isEntry": true,
+    "imports": [
+      "_splide.min-Fq6cbpiK.js"
+    ]
+  },
   "resources/js/app.js": {
-    "file": "assets/app-CWKQgxU1.js",
+    "file": "assets/app-XCBfO2NM.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
-    "css": [
-      "assets/app-BRKXMWAJ.css"
+    "imports": [
+      "_splide.min-Fq6cbpiK.js"
     ]
   },
   "resources/scss/app.scss": {
-    "file": "assets/app-g-29ZkVf.css",
+    "file": "assets/app-CPIuNUQM.css",
     "src": "resources/scss/app.scss"
   }
 }
