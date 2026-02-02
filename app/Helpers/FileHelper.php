@@ -20,20 +20,34 @@ if (!function_exists('upload_file')) {
      * @param  string  $disk
      * @return array  paths of original + resized images
      */
-    function upload_file($file, $path = 'uploads', $sizes = [], $quality = 80, $disk = 'public',$suffix = null,$file_id = null)
+    function upload_file($file, $path = 'uploads', $sizes = [], $quality = 80, $disk = 'public', $suffix = null, $file_id = null)
     {
         if (!$file && !$file_id) {
             return [];
-        };
+        }
+        ;
 
         $extension = strtolower($file->getClientOriginalExtension());
-        $filename  = Str::uuid().($suffix ? '-'.$suffix : '');
+        $filename = Str::uuid() . ($suffix ? '-' . $suffix : '');
         $paths = [];
 
         // ---------- ORIGINAL ----------
         $originalPath = trim($path, '/') . '/original/' . $filename . '.' . $extension;
         $content = file_get_contents($file->getRealPath()); // safe copy
-        Storage::disk($disk)->put($originalPath, $content);
+        // Storage::disk($disk)->put($originalPath, $content);
+        $diskInstance = Storage::disk($disk);
+
+        // Ensure directory exists
+        $directory = dirname($originalPath);
+        if (!$diskInstance->exists($directory)) {
+            $diskInstance->makeDirectory($directory);
+        }
+
+        // Save file (overwrite if exists)
+        $diskInstance->put($originalPath, $content, [
+            'visibility' => 'public',
+        ]);
+
 
         // $paths['original'] = $originalPath;
 
@@ -44,8 +58,8 @@ if (!function_exists('upload_file')) {
         // 'size',
         // 'path',
         //     ];
-        if($file_id){
-            $original =FileItem::create([
+        if ($file_id) {
+            $original = FileItem::create([
                 'file_id' => $file_id,
                 'path' => $originalPath,
                 'type' => 'original',
@@ -80,20 +94,21 @@ if (!function_exists('upload_file')) {
 if (!function_exists('delete_file')) {
     function delete_file($file)
     {
-       $file->getAll()->each(function ($item) {
-           Storage::disk(config('uploadconfig.disk'))->delete($item->path);
-       });
-       $file->delete();
+        $file->getAll()->each(function ($item) {
+            Storage::disk(config('uploadconfig.disk'))->delete($item->path);
+        });
+        $file->delete();
     }
 }
 if (!function_exists('upload')) {
-    function upload($modelClass,$id, $filefor, $file, $oldFile = null,$name=null,$caption=null)
+    function upload($modelClass, $id, $filefor, $file, $oldFile = null, $name = null, $caption = null)
     {
         $config = config("uploadconfig.models.$modelClass.$filefor");
         // dd($file);
-        if (!is_array($config) || !$file  || !is_integer($id)) {
+        if (!is_array($config) || !$file || !is_integer($id)) {
             return null;
-        };
+        }
+        ;
 
 
 
@@ -127,7 +142,7 @@ if (!function_exists('upload')) {
         //     'model_id',
         //     'model_type',
         // ];
-       $DBFile= File::create([
+        $DBFile = File::create([
             'name' => $name ?? $file->getClientOriginalName(),
             'caption' => $caption ?? null,
             'extension' => $ext,
@@ -136,7 +151,7 @@ if (!function_exists('upload')) {
             'model_id' => $id,
             'type' => $type,
         ]);
-         $uploaded= upload_file(
+        $uploaded = upload_file(
             $file,
             $path,
             $config['items'] ?? [],
@@ -145,15 +160,13 @@ if (!function_exists('upload')) {
             $suffix,
             $DBFile->id,
         );
-        if(!$uploaded && $uploaded===[]){
+        if (!$uploaded && $uploaded === []) {
             $DBFile->delete();
             throw new \Exception('File upload failed');
         }
-        if($uploaded && $uploaded!==[]){
-            if($oldFile){
-
-                    delete_file($oldFile);
-
+        if ($uploaded && $uploaded !== []) {
+            if ($oldFile) {
+                delete_file($oldFile);
             }
         }
 
