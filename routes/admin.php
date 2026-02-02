@@ -18,6 +18,10 @@ Route::get('/users', App\Livewire\Admin\Users\Users::class)->name('users');
 //frontend managements <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 //services
 Route::get('/frontend/services', App\Livewire\Admin\Frontend\OurService::class)->name('frontend.services');
+//projects
+Route::get('/frontend/projects',App\Livewire\Admin\Frontend\OurProject::class)->name('frontend.projects');
+Route::get('/frontend/projects/create-or-update',App\Livewire\Admin\Frontend\OurProjectCreateOrUpdate::class)->name('frontend.projects.createorupdate');
+
 
 //permissions
 Route::get('/permissions/roles', App\Livewire\Admin\Permissions\RoleList::class)->name('roles.list');

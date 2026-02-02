@@ -28,18 +28,13 @@
                     <li wire:click="filter('all')"
                         class="filter-item inline-flex  text-gray-300 rounded-2xl px-3 py-1 border border-gray-500 cursor-pointer text-[8px] md:text-sm {{ $parent_category == 'all' ? 'active' : '' }}"
                         data-filter="all">All</li>
-                    <li wire:click="filter('1')"
-                        class="filter-item inline-flex text-gray-300 rounded-2xl px-3 py-1 border border-gray-500 cursor-pointer text-[8px] md:text-sm {{ $parent_category == '1' ? 'active' : '' }}"
-                        data-filter="branding">Custom Software</li>
-                    <li wire:click="filter('2')"
-                        class="filter-item inline-flex text-gray-300 rounded-2xl px-3 py-1 border border-gray-500 cursor-pointer text-[8px] md:text-sm {{ $parent_category == '2' ? 'active' : '' }}"
-                        data-filter="design">Websites & Apps</li>
-                    <li wire:click="filter('3')"
-                        class="filter-item inline-flex text-gray-300 rounded-2xl px-3 py-1 border border-gray-500 cursor-pointer text-[8px] md:text-sm {{ $parent_category == '3' ? 'active' : '' }}"
-                        data-filter="development">Branding & Deisgn</li>
-                    <li wire:click="filter('4')"
-                        class="filter-item inline-flex text-gray-300 rounded-2xl px-3 py-1 border border-gray-500 cursor-pointer text-[8px] md:text-sm {{ $parent_category == '4' ? 'active' : '' }}"
-                        data-filter="development">Growth Marketing</li>
+                    @if($main_categories->count() > 0)
+                            @foreach($main_categories as $category)
+                                       <li wire:click="filter('{{ $category->id }}')"
+                        class="filter-item inline-flex text-gray-300 rounded-2xl px-3 py-1 border border-gray-500 cursor-pointer text-[8px] md:text-sm {{ $parent_category == $category->id ? 'active' : '' }}"
+                        data-filter="{{ $category->id }}">{{ $category->name }}</li>
+                            @endforeach
+                        @endif
                 </ul>
                 <div class="search w-full md:w-auto">
                     <div

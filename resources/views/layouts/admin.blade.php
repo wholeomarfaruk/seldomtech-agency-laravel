@@ -7,8 +7,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin - SELDOM TECH</title>
 
+    <link rel="stylesheet" href="https://unpkg.com/trix@2.1.16/dist/trix.css">
+    <script src="https://unpkg.com/trix@2.1.16/dist/trix.umd.min.js"></script>
 
-    @vite(['resources/css/app.css', 'resources/scss/app.scss', 'resources/js/app.js'])
+    <style>
+        /* Fix Trix styling to match Tailwind Inputs */
+        trix-editor {
+            min-height: 20rem !important;
+            border-color: #d1d5db !important;
+            /* border-gray-300 */
+            border-radius: 0.375rem !important;
+            /* rounded-md */
+        }
+
+        trix-editor:focus {
+            border-color: #6366f1 !important;
+            /* focus:border-indigo-500 */
+            ring-color: #6366f1 !important;
+        }
+
+        /* Hide the default Trix attachment button if you don't want uploads */
+        .trix-button--icon-attach {
+            display: none !important;
+        }
+    </style>
+    @vite(['resources/css/app.css', 'resources/scss/app.scss', 'resources/js/admin.js'])
     @livewireStyles
     @stack('styles')
 </head>
@@ -307,7 +330,9 @@
                         x-bind:class="$store.sidebar.full ? expandedClass : shrinkedClass"
                         class="text-gray-400 space-y-3">
                         <a href="{{ route('admin.frontend.services') }}"
-                            class="hover:text-gray-200 cursor-pointer">Services</a>
+                            class="hover:text-gray-200 cursor-pointer block">Services</a>
+                        <a href="{{ route('admin.frontend.projects') }}"
+                            class="hover:text-gray-200 cursor-pointer block">Projects</a>
                     </div>
                 </div>
 

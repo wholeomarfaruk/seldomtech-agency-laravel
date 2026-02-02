@@ -14,6 +14,7 @@ Route::get('/contact-us', ContactUs::class)->name('contactus');
 Route::get('/terms-of-use', TermsOfUse::class)->name('termsofuse');
 Route::get('/privacy-policy', PrivacyPolicy::class)->name('privacypolicy');
 Route::get('/projects', Projects::class)->name('projects');
+Route::get('/projects/{slug}', Projects::class)->name('projects.details');
 Route::get('/register', App\Livewire\Website\Register::class)->name('register');
 
 

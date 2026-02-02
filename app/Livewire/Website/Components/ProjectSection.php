@@ -2,6 +2,8 @@
 
 namespace App\Livewire\Website\Components;
 
+use App\Models\OurProject;
+use App\Models\OurService;
 use Livewire\Component;
 
 class ProjectSection extends Component
@@ -11,83 +13,46 @@ class ProjectSection extends Component
     public string $section_title;
     public string $section_description;
     public string $parent_category = 'all';
+    public $main_categories;
 
+    public function mount(){
+
+        $this->main_categories= OurService::where('parent_id',null)->get();
+    }
     public function render()
     {
-        $projects = collect([
-            [
-                'title' => 'Project 1',
-                'category' => [
-                    'name' => 'Category 1',
-                ],
-                'parent_category' => [
-                    'name' => 'Category 1',
-                    'id' => 1,
-                ],
-                'description' => 'Lorem ipsum...',
-                'featured_image' => 'https://images.unsplash.com/photo-1498050108023-c5249f4df085',
-                'url' => '#',
-            ],
-            [
-                'title' => 'Project 2',
-                'category' => [
-                    'name' => 'Category 2',
+        $this->projects= OurProject::query()
+        // ->where('is_published', true)
+        ->with(['service'])
+        ->when($this->search, function ($query) {
+            $query->where('name', 'LIKE', '%' . $this->search . '%');
+        })
+        ->when($this->parent_category != 'all', function ($query) {
+            $query->where('our_service_id', $this->parent_category)
+                ->orWhereHas('service', function ($subQ) {
+                    $subQ->where('parent_id', $this->parent_category);
+                });
+        })
+        ->orderByDesc('is_featured')->orderByDesc('updated_at')->get()->take(10);
 
-                ],
-                'parent_category' => [
-                    'name' => 'Category 2',
-                    'id' => 2,
-                ],
-                'description' => 'Lorem ipsum...',
-                'featured_image' => 'https://images.unsplash.com/photo-1498050108023-c5249f4df085',
-                'url' => '#',
-            ],
-            [
-                'title' => 'Project 3',
-                'category' => [
-                    'name' => 'Category 2',
-
-                ],
-                'parent_category' => [
-                    'name' => 'Category 2',
-                    'id' => 3,
-                ],
-                'description' => 'Lorem ipsum...',
-                'featured_image' => 'https://images.unsplash.com/photo-1498050108023-c5249f4df085',
-                'url' => '#',
-            ],
-            [
-                'title' => 'Project 4',
-                'category' => [
-                    'name' => 'Category 2',
-
-                ],
-                'parent_category' => [
-                    'name' => 'Category 2',
-                    'id' => 4,
-                ],
-                'description' => 'Lorem ipsum...',
-                'featured_image' => 'https://images.unsplash.com/photo-1498050108023-c5249f4df085',
-                'url' => '#',
-            ],
-        ])->map(fn($project) => (object) $project);
-        if ($this->parent_category == 'all') {
-            $this->projects = $projects;
-        }
+        // if ($this->parent_category == 'all') {
+        //     $this->projects = $projects;
+        // }
         // Filter by parent category
-        if ($this->parent_category != 'all') {
-            $this->projects = $projects->filter(function ($project) {
-                return $project->parent_category['id'] == $this->parent_category;
-            });
-        }
+        // if ($this->parent_category != 'all') {
+        //     $this->projects = $projects->filter(function ($project) {
+        //         return $project->parent_category['id'] == $this->parent_category;
+        //     });
+        // }
 
-        // Filter by search term
-        if ($this->search) {
-            $search = $this->search;
-            $this->projects = $this->projects->filter(function ($project) use ($search) {
-                return str_contains(strtolower($project->title), strtolower($search));
-            });
-        }
+        // // Filter by search term
+        // if ($this->search) {
+        //     $search = $this->search;
+        //     $this->projects = $this->projects->filter(function ($project) use ($search) {
+        //         return str_contains(strtolower($project->title), strtolower($search));
+        //     });
+        // }
+        // dd($this->projects);
         $this->dispatch('refresh');
 
         return view('livewire.website.components.project-section');

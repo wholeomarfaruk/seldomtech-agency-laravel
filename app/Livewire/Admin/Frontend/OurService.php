@@ -19,7 +19,7 @@ class OurService extends Component
             'name' => 'required',
             'slug' => 'required',
         ]);
-     
+        
         ModelsOurService::updateOrCreate(
             // 1. Unique identifier to find the record
             ['id' => $this->service_id],

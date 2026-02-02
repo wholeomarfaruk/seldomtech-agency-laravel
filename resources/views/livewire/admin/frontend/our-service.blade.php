@@ -117,6 +117,7 @@
                                </svg>
 
                                <span class="text-sm font-medium"> New Service</span>
+                           </button>
                        </div>
                    </div>
                </div>

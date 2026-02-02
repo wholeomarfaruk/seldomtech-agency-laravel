@@ -17,18 +17,19 @@ class File extends Model
         'model_type',
     ];
 
-   
+
     public function getAll()
     {
         return $this->hasMany(FileItem::class);
     }
     public function getFirst($for)
     {
-        return $this->hasOne(FileItem::class)->where('for', $for)->first();
+        return $this->hasMany(FileItem::class)->first();
     }
     public function getItems($for)
     {
-        return $this->hasMany(FileItem::class)->where('for', $for)->get();
+
+        return $this->hasMany(FileItem::class)->where('type', $for)->get();
     }
     public function content()
     {

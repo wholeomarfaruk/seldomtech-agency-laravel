@@ -33,7 +33,7 @@ class Roles extends Component
 
         // dd($this->roles); // Debugging line to check filtered roles
 
-        return view('livewire.admin.permissions.roles');->layout('layouts.admin');
+        return view('livewire.admin.permissions.roles')->layout('layouts.admin');
     }
         public function openViewModal($id)
     {

@@ -4,7 +4,7 @@
 
     <!-- Project Image -->
     <div class="rounded-xl overflow-hidden mb-4">
-        <img src="{{ $project?->featured_image }}" alt="{{ $project?->title }}"
+        <img src="{{ $project?->featured_image('original') }}" alt="{{ $project?->name }}"
             class="w-full h-48 object-cover">
     </div>
 
@@ -13,15 +13,15 @@
         class="inline-block w-fit mb-3
                             text-[10px] px-3 py-1 rounded-full
                             bg-purple-500/10 text-purple-400">
-        @if ($project?->parent_category)
-            {{ $project?->parent_category['name'] }}
+        @if ($project?->service?->parent)
+            {{ $project?->service?->parent?->name }}
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="currentColor" class="size-2 inline">
                 <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
             </svg>
         @endif
 
-        {{ $project?->category['name'] }}
+        {{ $project?->service?->name }}
     </span>
 
     <!-- Title -->
@@ -31,7 +31,7 @@
 
     <!-- Description -->
     <p class="text-gray-400 text-sm mb-6">
-        {{ $project?->description }}
+        {{ $project?->short_description }}
     </p>
 
     <!-- Spacer pushes buttons to bottom -->
